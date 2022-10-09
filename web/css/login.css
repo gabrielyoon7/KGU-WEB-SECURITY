@@ -1,0 +1,89 @@
+html {
+    background-color: white;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    font-family: NanumSquare;
+    background-color: #EDEEF2;
+}
+
+#content {
+    width: 700px;
+    margin: 0 auto;
+    border-bottom: 2px solid #37474F;
+    padding: 30px;
+}
+
+#content > div {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 15px;
+}
+
+#title {
+    font-size: 50px;
+}
+
+#titie > div > img {
+    width: 500px;
+}
+
+.iText {
+    margin: 0 auto;
+    width: 500px;
+    height: 50px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.regi_input {
+    margin: 0 auto;
+    width: 474px;
+    height: 30px;
+    font-size: 15px;
+    border: none;
+}
+
+a {
+    color: black;
+}
+
+#login_btn {
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    background-color: #336666;
+    color: white;
+	width: 248px;
+    display: inline-block;
+}
+.login_btn {
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    background-color: #336666;
+    color: white;
+    width: 248px;
+    display: inline-block;
+}
+#wrong_password{
+    color: red;
+}
+/* 서버에서 알림~ access_denied에서 필요해서 하나만듦~ */
+#copy_of_login_btn {
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    background-color: #339999;
+    color: white;
+}
+
+#information {
+    font-size: 18px;
+}

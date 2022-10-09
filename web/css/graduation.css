@@ -1,0 +1,282 @@
+table {
+    align-content: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+td {
+    text-align: center;
+    border-bottom: 1px solid gainsboro;
+}
+
+#page {
+    justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table a {
+    color: #546E7A;
+}
+
+strong a {
+    color: #546E7A;
+}
+
+th {
+    margin: 0;
+    border-bottom: 1px solid #607D8B;
+    border-top: 2px solid #607D8B;
+    background-color: #ECEFF1;
+}
+
+table .post_button {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.student_info {
+    padding: 5px;
+    border: 1px solid #607D8B;
+    font-size: 13px;
+    display: flex;
+    width: 748px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.student_info > div {
+    width: 390px;
+    margin-top: 10px;
+    margin: 0 auto;
+}
+
+#student_add_container {
+    font-size: 15px;
+}
+
+#student_add_box {
+    background-color: transparent;
+    position: absolute;
+    width: 1000px;
+    height: 300px;
+    margin: 0 auto;
+    top: 200px;
+    /*max-width: 0;*/
+    visibility: hidden;
+    z-index: -1;
+}
+
+#student_add_box:hover {
+    max-width: 1000px;
+    z-index: 1000;
+}
+
+#student_add_box > div {
+    background-color: white;
+    margin: auto;
+    color: black;
+    width: 500px;
+    border:2px solid #00897B;
+    border-radius: 5px;
+    box-shadow: 0px 30px 50px #888888;
+}
+
+/*#student_box{
+    padding:0;
+    width:500px;
+    font-size:20px;
+}*/
+#cal_add_box {;
+    background-color: transparent;
+    position: absolute;
+    width: 1000px;
+    height: 400px;
+    margin: 0 auto;
+    top: 200px;
+    /*max-width: 0;*/
+    visibility: hidden;
+    z-index: -1;
+}
+
+#cal_add_container {
+    font-size: 15px;
+}
+
+#cal_add_box:hover {
+    max-width: 1000px;
+    z-index: 1000;
+}
+
+#cal_add_box > div {
+    background-color: white;
+    border:2px solid #00897B;
+    margin: auto;
+    color: black;
+    width: 500px;
+    border-radius: 5px;
+    box-shadow: 0px 30px 50px #888888;
+}
+
+.cal_box {
+    padding: 0;
+    width: 500px;
+}
+.add_box {;
+    background-color: transparent;
+    position: absolute;
+    width: 1000px;
+    height: 400px;
+    margin: 0 auto;
+    top: 200px;
+    /*max-width: 0;*/
+    visibility: hidden;
+    z-index: -1;
+}
+
+.add_container {
+    font-size: 15px;
+}
+
+.add_box:hover {
+    max-width: 1000px;
+    z-index: 1000;
+}
+
+.add_box > div {
+    background-color: white;
+    border:2px solid #00897B;
+    margin: auto;
+    color: black;
+    width: 500px;
+    border-radius: 5px;
+    box-shadow: 0px 30px 50px #888888;
+}
+
+.cal_box {
+    padding: 0;
+    width: 500px;
+}
+
+#memo_add_box {
+    background-color: transparent;
+    position: absolute;
+    width: 1000px;
+    height: 400px;
+    margin: 0 auto;
+    top: 200px;
+    /*max-width: 0;*/
+    visibility: hidden;
+    z-index: -1;
+}
+
+#memo_add_container {
+    font-size: 15px;
+}
+
+#memo_add_box:hover {
+    max-width: 1000px;
+    z-index: 1000;
+}
+
+#memo_add_box > div {
+    background-color: white;
+    margin: auto;
+    color: black;
+    width: 500px;
+    border:2px solid #00897B;
+    border-radius: 5px;
+    box-shadow: 0px 30px 50px #888888;
+}
+
+#memo_box {
+    padding: 0;
+    width: 500px;
+}
+
+#consult_add_box {;
+    background-color: transparent;
+    position: absolute;
+    width: 1000px;
+    margin: 0 auto;
+    top: 200px;
+    /*max-width: 0;*/
+    visibility: hidden;
+    z-index: -1;
+}
+
+#consult_add_container {
+    font-size: 15px;
+}
+
+#consult_add_box:hover {
+    max-width: 1000px;
+    z-index: 1000;
+}
+
+#consult_add_box > div {
+    background-color: white;
+    margin: auto;
+    color: black;
+    width: 500px;
+    border:2px solid #00897B;
+    border-radius: 5px;
+    box-shadow: 0px 30px 50px #888888;
+}
+
+#consult_box {
+    padding: 0;
+    width: 500px;
+}
+
+.input_container {
+    padding:5px;
+    width: 350px;
+    margin: 0 auto;
+}
+
+.input_container input {
+    width: auto;
+    height: 20px;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+}
+
+#student_add_box > div {
+    margin: 0 auto;
+}
+
+#memo_add_box > div {
+    font-size: 13px;
+    margin: 0 auto;
+}
+
+#consult_add_box > div {
+    font-size: 13px;
+    margin: 0 auto;
+}
+
+#student_add_box ul {
+    font-size: 13px;
+}
+
+#memo_add_box ul {
+    font-size: 13px;
+}
+
+#consult_add_box ul {
+    font-size: 13px;
+}
+
+#status_table {
+    width: 750px;
+}

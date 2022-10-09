@@ -1,0 +1,4 @@
+# Project exclude paths
+/out/
+
+/src/kr/ac/kyonggi/cs/common/sql/

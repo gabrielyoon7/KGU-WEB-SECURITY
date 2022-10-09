@@ -1,0 +1,218 @@
+@media (max-width: 1000px) {
+    /*#tab {*/
+    /*    max-width: 0;*/
+    /*    visibility: hidden;*/
+    /*}*/
+
+    /*#container {*/
+    /*    width: 100%;*/
+    /*}*/
+
+    /*p {*/
+
+    /*}*/
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    border: 1px solid gainsboro;
+}
+
+#container {
+    max-width: 1000px;
+    margin:0;
+    border-top: 1px solid gainsboro;
+}
+
+.deco_dot{
+    vertical-align: middle;
+    font-size: 10px;
+    vertical-align: middle;
+    padding-right: 5px;
+    color: gainsboro;
+}
+
+#tab {
+    border-right: 1px solid gainsboro;
+    font-family: "Nanum Gothic", sans-serif;
+    width: 150px;
+}
+#tab a{
+    vertical-align: middle;
+}
+#tab > ul > li {
+    font-family: NanumSquare;
+    padding-right: auto;
+    font-size: 14px;
+    padding-top: 12px;
+    padding-left: 16px;
+    padding-bottom: 12px;
+}
+
+#tab > ul > li:hover {
+    font-weight: bold;
+    background-color: #66CCCC;
+}
+#tab > ul > li:hover .deco_dot{
+    color: #00897B;
+}
+
+#maincontent {
+    min-height: 500px;
+    line-height: 1.8em;
+    font-family: "Nanum Gothic", sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#maincontent > ul {
+    margin-left: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    list-style: square url(../img/list.gif);
+}
+
+#maincontent > ul > li > ul {
+    list-style: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.paddingtype{
+    display:inline;
+    font-family: NanumSquare;
+    color: #455A64;
+    font-size:17px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.paddingtype2{
+    display:inline;
+    font-family: NanumSquare;
+    font-size:17px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.paddingButton{
+    font-family: NanumSquare;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contenttitle2 {
+    font-family: NanumSquare;
+    color: #455A64;
+    font-size:17px;
+    font-weight: 600;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.contenttitle {
+    font-family: NanumSquare;
+    color: #455A64;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+#maincontent > ul {
+    padding: 10px;
+    max-width: 900px;
+}
+
+#maincontent > ul > li {
+    padding-left: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+#maincontent ul>li>ul{
+    border-bottom: 1px solid gainsboro;
+}
+li {
+    margin: 0;
+    /*border-bottom: 1px solid gainsboro;*/
+    padding: 2px;
+
+}
+
+#subtitle {
+    font-size: 20px;
+}
+
+a {
+    color: black;
+}
+
+#clublogo {
+    width: 40px;
+}
+
+#undertitle {
+    display: flex;
+    flex-direction: row;
+    width: 20px;
+}
+
+#tap5 > ul > li > ul > li {
+    border: none;
+}
+
+p {
+    font-size: 15px;
+}
+
+dl {
+    display: inline-block;
+    margin-left: 25px;
+    margin-bottom: 0;
+    margin-top: 0;
+    width: 535px;
+}
+
+dt {
+    width: 28px;
+    height: 28px;
+    float: left;
+}
+
+dt > img {
+    padding: 4px;
+    width: 20px;
+}
+
+dd {
+    margin-left: 10px;
+}
+
+/*ul > img {
+    width: 80px;
+}*/
+
+#tap1 > ul > div {
+    /*width:500px;*/
+    display: inline;
+}
+
+.link {
+    color: #00897B;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
