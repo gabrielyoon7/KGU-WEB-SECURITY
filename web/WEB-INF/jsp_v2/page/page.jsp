@@ -42,6 +42,7 @@
      * for page.jsp
      * */
     String jsp = (String) request.getAttribute("jsp");
+    System.out.println("ㄹㄹ");
 %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>

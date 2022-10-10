@@ -2033,39 +2033,45 @@ UPDATE `fdb_pages` SET path='notice_article_list.kgu' WHERE id=46;
 UPDATE `fdb_pages` SET path='notice_article_list.kgu' WHERE id=51;
 
 -- locker 업데이트
-delete from kgcs.fdb_pages where id = 106;
-delete from kgcs.fdb_pages where id = 107;
-delete from kgcs.fdb_pages where id = 108;
-delete from kgcs.fdb_pages where id = 109;
-delete from kgcs.fdb_pages where id = 110;
-delete from kgcs.fdb_pages where id = 111;
-delete from kgcs.fdb_pages where id = 112;
+delete from test_db.fdb_pages where id = 106;
+delete from test_db.fdb_pages where id = 107;
+delete from test_db.fdb_pages where id = 108;
+delete from test_db.fdb_pages where id = 109;
+delete from test_db.fdb_pages where id = 110;
+delete from test_db.fdb_pages where id = 111;
+delete from test_db.fdb_pages where id = 112;
 
-update kgcs.fdb_pages set path = 'admin.kgu' where id= 63;
-update kgcs.fdb_pages set path = 'admin.kgu' where id= 64;
-update kgcs.fdb_pages set path = 'admin.kgu' where id= 65;
-update kgcs.fdb_pages set path = 'admin.kgu' where id= 66;
-update kgcs.fdb_pages set path = 'admin.kgu' where id= 79;
-update kgcs.fdb_pages set path = 'admin.kgu' where id= 80;
-update kgcs.fdb_pages set path = 'admin.kgu' where id= 91;
+update test_db.fdb_pages set path = 'admin.kgu' where id= 63;
+update test_db.fdb_pages set path = 'admin.kgu' where id= 64;
+update test_db.fdb_pages set path = 'admin.kgu' where id= 65;
+update test_db.fdb_pages set path = 'admin.kgu' where id= 66;
+update test_db.fdb_pages set path = 'admin.kgu' where id= 79;
+update test_db.fdb_pages set path = 'admin.kgu' where id= 80;
+update test_db.fdb_pages set path = 'admin.kgu' where id= 91;
 
-update kgcs.fdb_pages set path = 'locker_apply.kgu' where id= 93;
-update kgcs.fdb_pages set path = 'locker_apply_list.kgu' where id= 97;
-update kgcs.fdb_pages set path = 'locker_assigned_list.kgu' where id= 98;
-update kgcs.fdb_pages set path = 'locker_manager.kgu' where id= 96;
-update kgcs.fdb_pages set path = 'locker_schedule.kgu' where id= 92;
-update kgcs.fdb_pages set path = 'locker_schedule.kgu' where id= 95;
-update kgcs.fdb_pages set path = 'locker_schedule.kgu?num=111' where id= 88;
+update test_db.fdb_pages set path = 'locker_apply.kgu' where id= 93;
+update test_db.fdb_pages set path = 'locker_apply_list.kgu' where id= 97;
+update test_db.fdb_pages set path = 'locker_assigned_list.kgu' where id= 98;
+update test_db.fdb_pages set path = 'locker_manager.kgu' where id= 96;
+update test_db.fdb_pages set path = 'locker_schedule.kgu' where id= 92;
+update test_db.fdb_pages set path = 'locker_schedule.kgu' where id= 95;
+update test_db.fdb_pages set path = 'locker_schedule.kgu?num=111' where id= 88;
 
 
 
 -- 여기서부터 사용
-update kgcs.fdb_pages set path='req_article_list.kgu' where id=31;
-update kgcs.fdb_pages set path ='notice_article_list.kgu?num=91' where id=78;
-update kgcs.fdb_pages set path ='notice_article_list.kgu' where id=81;
+update test_db.fdb_pages set path='req_article_list.kgu' where id=31;
+update test_db.fdb_pages set path ='notice_article_list.kgu?num=91' where id=78;
+update test_db.fdb_pages set path ='notice_article_list.kgu' where id=81;
 
-update kgcs.fdb_pages set path='webzine_list.kgu' where id=72;
-update kgcs.fdb_pages set path ='webzine_list.kgu?' where id=73;
-update kgcs.fdb_pages set path ='webzine_list.kgu' where id=74;
+update test_db.fdb_pages set path='webzine_list.kgu' where id=72;
+update test_db.fdb_pages set path ='webzine_list.kgu?' where id=73;
+update test_db.fdb_pages set path ='webzine_list.kgu' where id=74;
 
-
+insert into user values('master', 'ab7c307cb539f32a4b296441e65033740ac1bc8788f60869e445ad93084cac72', '관리자', '여', '2022-10-10', '관리자', 'master', 'master', '2022-10-10 18:19:19', '-', '2022-10-10 18:17:01', '-', '-', '-', '-', '-', '-'
+);
+insert into user values('attacker', 'adece85931255583c46e634da7112082bc83ce8203958986fab6447b2b0db76b', '공격자', '남', '2022-10-10', '학부생', 'attacker', 'attacker', '2022-10-10 18:25:48', '-', '2022-10-10 18:24:06', '-', '-', '-', '-', '-', '-'
+    );
+insert into notice_boards values('1', 'admin', '팍스코이앤아이(주) 채용 안내', '46', '137', '0', '0', '2016-09-09 19:39:05', '<p>모집분야: 전산장비 유지보수 (남)</p>\n\n<p>자격조건</p>\n\n<p>– 관련학과 : 컴퓨터공학 및 전산과 관련 학과</p>\n\n<p>– 컴퓨터 및 전산장비에 관심이 많고 잘 다루는 사람</p>\n\n<p>– 책임감있고 적극적인 성격 소유자를 원함</p>\n\n<p>– 근무지: 구로경찰서 전산팀</p>\n\n<p>– 기간 : 약 6개월 정도 (추후 협의가능)</p>\n\n<p>– 급여 : 월 130만원</p>\n\n<p>업무: 컴퓨터, 프린터, 네트워크장비와 전산장비 유지보수 및 관리 업무</p>\n\n<p> </p>\n\n<p>1) 제출서류 : 이력서/ 자기소개서/ 졸업(예정)증명서</p>\n\n<p>2) 제출기한 : 2016년 9월 13일까지(긴급)</p>\n\n<p>3) 지원방법 : 이메일 지원 (paxko1999@paxkoeni.com)</p>\n\n<p>4) 전형절차 : 서류심사 및 면접전형</p>', '관리자', '0', 'false'
+                                );
+-- update user set type="관리자" where id="master";
