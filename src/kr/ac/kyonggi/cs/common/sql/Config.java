@@ -27,7 +27,7 @@ public class Config {
 //	private final String pw = "****";
 //	private final String pw = "1q2w3e4r!";
 	private final String pw = "NewSt@rt!70";
-	private final String dbname = "kgcs";
+	private final String dbname = "test_db";
 	
 	private String url = tool + domain + ":" + port + "/" + dbname
 			+ "?autoReconnect=true&useSSL=false&validationQuery=select 1&allowPublicKeyRetrieval=true";
