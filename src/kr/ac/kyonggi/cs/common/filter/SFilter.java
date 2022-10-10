@@ -39,8 +39,8 @@ public class SFilter implements Filter{
 		 * */
 		StringBuffer url = request.getRequestURL();
 		String urlString = url+"";
-		if(!urlString.contains("webp")){
-			response.sendRedirect("webp/Index");
+		if(!urlString.contains("KGU_WEB_SECURITY")){
+			response.sendRedirect("KGU_WEB_SECURITY/Index");
 			return;
 		}
 		/**
