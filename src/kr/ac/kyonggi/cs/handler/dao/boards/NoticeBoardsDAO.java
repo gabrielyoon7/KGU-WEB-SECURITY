@@ -145,6 +145,7 @@ public class NoticeBoardsDAO {
 
 
 	public String insertComments(String data) {
+		System.out.println(data);
 		String arr[]=data.split("-/-/-"); //0 = id  1 = name 2 = article_id  3 = content
 		//Date today = new Date();
 		String today = dateToString(new Date());
@@ -163,6 +164,7 @@ public class NoticeBoardsDAO {
 
 
 	public String updateComments(String data) {
+		System.out.println(data);
 		String arr[]=data.split("-/-/-");//0=id 1=content 2= userid 3=usertype;
 		Connection conn =Config.getInstance().sqlLogin();
 		List<Map<String,Object>> listOfMaps = null;

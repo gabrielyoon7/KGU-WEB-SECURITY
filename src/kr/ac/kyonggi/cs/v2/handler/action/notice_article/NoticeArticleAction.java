@@ -52,7 +52,7 @@ public class NoticeArticleAction implements Action {
             request.setAttribute("boardslist", gson.toJson(nodao.getBoards(Integer.toString(it.id))));
         }
         request.setAttribute("jsp", gson.toJson("notice_list")); //*.jsp
-        return "RequestDispatcher:jsp_v2/page/page.jsp";
+        return "RequestDispatcher:jsp_v2/page/page_new_theme.jsp";
     }
 
 }
