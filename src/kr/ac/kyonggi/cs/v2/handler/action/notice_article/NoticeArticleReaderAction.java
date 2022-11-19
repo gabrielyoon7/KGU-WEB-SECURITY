@@ -67,7 +67,7 @@ public class NoticeArticleReaderAction implements Action{
             request.setAttribute("file", gson.toJson(it));
         }
         request.setAttribute("jsp", gson.toJson("notice_view")); //*.jsp
-        return "RequestDispatcher:jsp_v2/page/page.jsp";
+        return "RequestDispatcher:jsp_v2/page/page_new_theme.jsp";
     }
 
 }

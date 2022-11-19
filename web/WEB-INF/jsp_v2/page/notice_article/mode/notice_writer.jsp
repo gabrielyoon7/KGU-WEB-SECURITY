@@ -59,7 +59,7 @@
 
 <%--    var pane = $('#title');--%>
 <%--    var panel =$('#titlename');--%>
-<%--    var user = <%= user%>;--%>
+    var user = <%= user%>;
 <%--    var headtitle = <%=headermenulist%>;--%>
 <%--    for(var i = 0 ; i < headtitle.length ; ++i)--%>
 <%--        if((headtitle[i].tab_id < num) && (headtitle[i].tab_id > (num-1)))--%>

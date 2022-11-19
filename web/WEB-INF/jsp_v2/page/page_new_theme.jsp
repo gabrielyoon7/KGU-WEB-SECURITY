@@ -48,11 +48,27 @@
      * */
     String jsp = (String) request.getAttribute("jsp");
 %>
+<%
+    /**
+     * Header V2
+     * */
+
+    String headermenulist = (String) session.getAttribute("headermenulist");
+    String menulist = (String) session.getAttribute("menulist");
+    String user = (String) session.getAttribute("user");
+    String type = (String) session.getAttribute("type");
+%>
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
-<%@include file="../main/common_settings.jsp" %>
+<%--<%@include file="../main/common_settings.jsp" %>--%>
 <head>
-
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-table.js"></script>
+    <script src="js/bootstrap-table-cookie.js"></script>
+    <script src="js/bootstrap-table-export.min.js"></script>
+    <script src='js/sha256.js'></script>
+    <script src="//cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
 
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

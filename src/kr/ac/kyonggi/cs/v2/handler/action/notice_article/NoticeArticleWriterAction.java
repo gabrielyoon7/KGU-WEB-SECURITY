@@ -36,7 +36,7 @@ public class NoticeArticleWriterAction implements Action{
             request.setAttribute("pageMenuList", gson.toJson(homedao.getGrdTabMenu(num,1)));
         }
         request.setAttribute("jsp", gson.toJson("notice_write")); //*.jsp
-        return "RequestDispatcher:jsp_v2/page/page.jsp";
+        return "RequestDispatcher:jsp_v2/page/page_new_theme.jsp";
     }
 
 }
