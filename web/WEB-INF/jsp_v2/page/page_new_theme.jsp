@@ -132,12 +132,8 @@
                     </button>
                     <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
                         <ul class="navbar-nav navbar-nav-hover ms-auto">
-                            <li class="nav-item my-auto ms-3 ms-lg-0" id="member">
-
-                                <a href="loginpage.do"
-                                   class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0">LOGIN</a>
-
-                            </li>
+                            <li class="my-1" id="userInfo"></li>
+                            <li class="nav-item my-auto ms-3 ms-lg-0" id="loginButton"></li>
                         </ul>
                     </div>
                 </div>
@@ -436,7 +432,23 @@
     }
 </script>
 
+<script>
 
+    var user =<%=user%>;
+    var type =<%=type%>;
+    const loginButton = $('#loginButton');
+    const userInfo = $('#userInfo');
+    if (user === null){
+        var loginButtonText = '<a href="loginpage.do" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0 ms-1">LOGIN</a>';
+        var userInfoText = '';
+    }
+    else{
+        var loginButtonText = '<a href="logout.do" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0 ms-1">LOGOUT</a>';
+        var userInfoText = '안녕하세요. ' + user.name + ' (' + type.for_header + ')님';
+    }
+    loginButton.append(loginButtonText);
+    userInfo.append(userInfoText)
+</script>
 </body>
 
 </html>
