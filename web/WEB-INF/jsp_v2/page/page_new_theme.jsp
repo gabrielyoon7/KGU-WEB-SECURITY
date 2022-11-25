@@ -79,7 +79,7 @@
     <title>
 
 
-        Material Kit 2 by Creative Tim
+        AB대학교
 
 
     </title>
@@ -117,8 +117,8 @@
             <nav class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
                 <div class="container-fluid px-0">
                     <a class="navbar-brand font-weight-bolder ms-sm-3"
-                       href="https://demos.creative-tim.com/material-kit/index" rel="tooltip"
-                       title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
+                       href="./notice_article_list.kgu?num=42" rel="tooltip"
+                       title="Designed and Coded by Creative Tim" data-placement="bottom">
                         AB대학교
                     </a>
                     <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
@@ -150,16 +150,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 text-center mx-auto">
-                    <h1 class="text-white pt-3 mt-n5">Material Kit 2</h1>
-                    <p class="lead text-white mt-3">Free & Open Source Web UI Kit built over Bootstrap 5. <br/> Join
-                        over 1.6 million developers around the world. </p>
+                    <h1 class="text-white pt-3 mt-n5">AB대학교</h1>
+                    <p class="lead text-white mt-3">국내 최고의 대학에 오신 것을 환영합니다.</p>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
+<div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6 p-5">
     <c:choose>
         <%--    notice  --%>
         <c:when test="${jsp == '\"notice_list\"'}">
@@ -450,5 +449,9 @@
     userInfo.append(userInfoText)
 </script>
 </body>
-
+<style>
+    .fixed-table-toolbar {
+        display: none;
+    }
+</style>
 </html>
