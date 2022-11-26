@@ -20,45 +20,48 @@
     String nextlist = (String) request.getAttribute("nextlist");
 %>
 
-<ul>
-    <li>
+<%--<ul>--%>
+<%--    <li>--%>
         <div id="articlename" class="contenttitle"></div>
-    </li>
-</ul>
+<%--    </li>--%>
+<%--</ul>--%>
 
 <div id="post">
     <div id="posttitle" style="overflow-wrap:break-word;">
         <!-- 제목 -->
 
     </div>
-    <div id="postinfo">
+    <hr style="border : 1px solid black"/>
+    <div class="d-flex justify-content-between" id="postinfo">
         <!-- 작성자, 조회수, 작성일 -->
         <div id="postname"></div>
-        <div>
-            <div id="postviews"
-                 style="border-right : 1px solid black; margin-right:10px; padding-right: 10px">조회수 :
-            </div>
-            <div id="postlast"> 작성일 :</div>
+        <div class="d-flex justify-content-center">
+            <div class="mx-1" id="postviews">조회수 :</div>
+            |
+            <div class="mx-1" id="postlast"> 작성일 :</div>
         </div>
     </div>
+    <hr style="border : 1px solid black"/>
     <div id="post_box" class="post_box">
     </div>
     <div>
-        <div id="postmain">
+        <div id="postmain" style="min-height :300px">
             <!-- 메인내용 (content) -->
         </div>
     </div>
-    <div id="post_button" class="post_button">
+    <div id="post_button" class="post_button d-flex justify-content-start">
     </div>
 </div>
-
+<hr style="border : 1px solid black"/>
 <!-- 댓글 -->
 <div id="comment">
     <div id="commenttitle"></div>
+    <hr style="border : 1px solid black"/>
     <div id="commentall"></div>
     <div></div>
 </div>
 <div id="comment_edit_container">
+    <hr style="border : 1px solid black"/>
     <form name="commentInsertForm">
         <div class="input-group">
             <input type="hidden" name="student_id" value="anomyous"><!-- 세션 -->
@@ -67,16 +70,23 @@
         </div>
     </form>
 </div>
+<hr style="border : 1px solid black"/>
 <div id="next_post" class="post_box">
     <ul>
         <li>
-            <div>다음글</div>
-            <div>|</div>
-            <div id="nextpost" class="one-line"></div>
+            <div class="d-flex justify-content-start">
+                <div>다음글</div>
+                <div class="mx-2">|</div>
+                <div id="nextpost" class="one-line"></div>
+            </div>
+        </li>
         <li>
-            <div>이전글</div>
-            <div>|</div>
-            <div id="previouspost" class="one-line"></div>
+            <div class="d-flex justify-content-start">
+                <div>이전글</div>
+                <div class="mx-2">|</div>
+                <div id="previouspost" class="one-line"></div>
+            </div>
+        </li>
     </ul>
 </div>
 
@@ -85,8 +95,12 @@
         makePageTitle('articlename'); // 본문 안에 제목 넣어주는 역할 (page.jsp에서 함수를 찾아보세요)
     })
 
-    if (<%=boardLevel%>.write_comment_level >= <%=type%>.board_level){
-        $('#for_comment').append('<textarea style="resize:none" name="content" class="form-control" cols="100" rows="1" placeholder="댓글을 입력하세요." required></textarea><div class="post_button" id="post_submit_btn"><a id="post_submit" class="btn btn-default">쓰기</a></div>');
+    if (<%=boardLevel%>.
+    write_comment_level >=
+    <%=type%>.board_level
+    )
+    {
+        $('#for_comment').append('<textarea style="resize:none" name="content" class="form-control" cols="100" rows="1" placeholder="댓글을 입력하세요." required></textarea><div class="post_button" id="post_submit_btn"><a id="post_submit" class="btn btn-primary">쓰기</a></div>');
     }
 </script>
 
@@ -97,7 +111,8 @@ var views = $('#postviews');
 var lastmodified = $('#postlast');
 var content = $('#postmain');
 var button = $('#post_button');
-var arr =<%=boards%>//관련된 모든 정보
+var arr =
+<%=boards%>//관련된 모든 정보
 var num = <%=num%>;
 var value = arr;
 
@@ -124,8 +139,16 @@ lastmodified.append(formatDate(value.last_modified));
 
 
 button.append(makelistbutton(num));
-if (<%=user%> !=null){
-    if (arr.student_id == <%=user%>.id || <%=user%>.type.includes('관리자')){
+if (<%=user%> !=
+null
+)
+{
+    if (arr.student_id == <%=user%>.
+    id ||
+    <%=user%>.
+    type.includes('관리자')
+)
+    {
         button.append(makeFixedButton(value));
         button.append(makemodifybutton(value, num));
         button.append(makedeletebutton(value));
@@ -136,10 +159,12 @@ function makemain(str) {
     return str.content;
 }
 
-function makeFixedButton(str){ //공지사항 고정 관련 코드
-    if ( <%=user%>.type.includes('관리자') )
+function makeFixedButton(str) { //공지사항 고정 관련 코드
+    if (<%=user%>.
+    type.includes('관리자')
+)
     {
-        let button = '<div><a onclick="fixed_button(\'' + str.fixed +'-/-/-'+str.id+'\')" class="btn btn-default">';
+        let button = '<div><a onclick="fixed_button(\'' + str.fixed + '-/-/-' + str.id + '\')" class="btn btn-default">';
         if (str.fixed == 'false') {
             button += '게시글 고정 등록'
         } else {
@@ -151,19 +176,19 @@ function makeFixedButton(str){ //공지사항 고정 관련 코드
 }
 
 function makelistbutton(num) {
-    return '<div><a href="notice_article_list.kgu?num=' + num + '" class="btn btn-default">목록</a></div>';
+    return '<div><a href="notice_article_list.kgu?num=' + num + '" class="btn btn-primary">목록</a></div>';
 }
 
 function makemodifybutton(str, num) {
-    return '<div><a href="notice_article_modifier.kgu?num=' + num + '&id=' + str.id + '" id="modifier" class="btn btn-default">수정</a></div>';
+    return '<div><a href="notice_article_modifier.kgu?num=' + num + '&id=' + str.id + '" id="modifier" class="btn btn-outline-info">수정</a></div>';
 }
 
 function makedeletebutton(str) {
     return '<div><input type="hidden" name="article_id" value="' + str.id + '">' +
-        '<a onclick="boardDelete(' + <%=id%> +')" class="btn btn-default">삭제</a>' + '</div>';
+        '<a onclick="boardDelete(' + <%=id%> +')" class="btn btn-outline-danger">삭제</a>' + '</div>';
 }
 
-function fixed_button(status){
+function fixed_button(status) {
     $.ajax({
         url: 'ajax.kgu',
         type: 'post',
@@ -179,7 +204,6 @@ function fixed_button(status){
 }
 
 </script>
-
 
 
 <script>//comment
@@ -226,36 +250,54 @@ function commentList() {
             }
 
             function commentlist(value) {
-                if (<%=user%> != null)
+                if (<%=user%> !=
+                null
+            )
                 {
-                    if (value.writer_id == <%=user%>.id || <%=type%>.type_name.includes("관리자")){
-                    return '<div class="commentmain"><div><strong>' + value.writer_name + '</strong></div>' +
-                        '<div id="comment_' + value.id + '_main" class="comment_main_content" style="max-width : 420px">' + value.content + '</div>' +
-                        '<div>' + formatDate(value.last_modified) + '</div>' +
-                        '<div id="commentmodify' + value.id + '">' + commentmodify(value) + '</div></div>';
-                }
+                    if (value.writer_id == <%=user%>.
+                    id ||
+                    <%=type%>.
+                    type_name.includes("관리자")
+                )
+                    {
+                        return '<div class="commentmain d-flex justify-content-between">' +
+                            '<div class="d-flex justify-content-start">' +
+                            '<div><strong>' + value.writer_name + '</strong></div>' +
+                            '<div class="mx-2">|</div>' +
+                            '<div id="comment_' + value.id + '_main" class="comment_main_content" style="max-width : 420px">' + value.content + '</div></div>' +
+                            '<div><div>' + formatDate(value.last_modified) + '</div>' +
+                            '<div class="d-flex justify-content-start" id="commentmodify' + value.id + '">' + commentmodify(value) + '</div></div></div>';
+                    }
                 else
                     {
                         {
-                            return '<div class="commentmain"><div><strong>' + value.writer_name + '</strong></div>' +
+                            return '<div class="commentmain d-flex justify-content-between">' +
+                                '<div class="d-flex justify-content-start">' +
+                                '<div><strong>' + value.writer_name + '</strong></div>' +
+                                '<div class="mx-2">|</div>' +
                                 '<div id="comment_' + value.id + '_main" class="comment_main_content">' + value.content + '</div>' +
-                                '<div>' + formatDate(value.last_modified) + '</div>' +
+                                '</div>' +
+                                '<div><div>' + formatDate(value.last_modified) + '</div></div>' +
                                 '</div>';
                         }
                     }
                 }
             else
                 {
-                    return '<div class="commentmain"><div><strong>' + value.writer_name + '</strong></div>' +
+                    return '<div class="commentmain d-flex justify-content-between">' +
+                        '<div class="d-flex justify-content-start">' +
+                        '<div><strong>' + value.writer_name + '</strong></div>' +
+                        '<div class="mx-2">|</div>' +
                         '<div id="comment_' + value.id + '_main" class="comment_main_content">' + value.content + '</div>' +
+                        '</div>' +
                         '<div>' + formatDate(value.last_modified) + '</div>' +
                         '</div>';
                 }
             }
 
             function commentmodify(value) {
-                return '<a onclick="commentUpdate(' + value.id + ',\'' + value.content + '\')" class="btn btn-default">수정 </a>' +
-                    '<a onclick="commentDelete(' + value.id + ')" class="btn btn-default">삭제</a>';
+                return '<a onclick="commentUpdate(' + value.id + ',\'' + value.content + '\')" class="btn btn-outline-info">수정 </a>' +
+                    '<a onclick="commentDelete(' + value.id + ')" class="btn btn-outline-danger">삭제</a>';
             }
         }
     });

@@ -38,7 +38,7 @@
     var num =<%=num%>;
     var write = $("#write_post");
     if (Number(<%=writeLevel%>) >= <%=type%>.board_level && <%=menu%>.page_title != '전체공지'){
-        write.append('<a href="notice_article_writer.kgu?num=' + num + '" class="btn btn-default">글쓰기</a>');
+        write.append('<a href="notice_article_writer.kgu?num=' + num + '" class="btn btn-primary">글쓰기</a>');
     }
 
 

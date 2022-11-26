@@ -13,11 +13,11 @@
     String num = (String)request.getAttribute("num");
 %>
 
-<ul>
-    <li>
-        <div id="articlename" class="contenttitle">글 작성하기</div>
-    </li>
-</ul>
+<%--<ul>--%>
+<%--    <li>--%>
+        <h3 id="articlename" class="contenttitle">글 작성하기</h3>
+<%--    </li>--%>
+<%--</ul>--%>
 <div class="form-group">
     <input type="text" class="form-control" id="post_title" name="title" placeholder="제목 :">
 </div>
@@ -27,8 +27,8 @@
     <input id="kv-explorer" type="file" multiple>
 </div>
 <div class="post_button" id="post_submit_btn">
-    <a href="javascript:exit();history.back()" class="btn btn-default">취소</a>
-    <a onclick="insertboard()" id="post_submit" class="btn btn-default">쓰기</a>
+    <a href="javascript:exit();history.back()" class="btn btn-outline-danger">취소</a>
+    <a onclick="insertboard()" id="post_submit" class="btn btn-outline-success">쓰기</a>
 </div>
 
 <script>
