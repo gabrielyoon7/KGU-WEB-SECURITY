@@ -115,7 +115,7 @@
                 if(data == 'success'){
                     alert("등록이 완료되었습니다");
                     is_submit = true;
-                    window.location.href = 'notice_article_list.do?num=<%=num %>';
+                    window.location.href = 'notice_article_list.kgu?num=<%=num %>';
                 }
             }
         });
