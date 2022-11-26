@@ -158,35 +158,39 @@
     </div>
 </header>
 
-<div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6 p-5">
-    <c:choose>
-        <%--    notice  --%>
-        <c:when test="${jsp == '\"notice_list\"'}">
-            <%--                        <%@include file="/WEB-INF/jsp_v2/page/notice_article/mode/notice_list.jsp" %>--%>
-            <jsp:include page="/WEB-INF/jsp_v2/page/notice_article/mode/notice_list.jsp" flush="false"></jsp:include>
-        </c:when>
-        <c:when test="${jsp == '\"notice_view\"'}">
-            <%--                        <%@include file="/WEB-INF/jsp_v2/page/notice_article/mode/notice_view.jsp" %>--%>
-            <jsp:include page="/WEB-INF/jsp_v2/page/notice_article/mode/notice_view.jsp" flush="false"></jsp:include>
-        </c:when>
-        <c:when test="${jsp == '\"notice_modify\"'}">
-            <%--                        <%@include file="/WEB-INF/jsp_v2/page/notice_article/mode/notice_modifier.jsp" %>--%>
-            <jsp:include page="/WEB-INF/jsp_v2/page/notice_article/mode/notice_modifier.jsp"
-                         flush="false"></jsp:include>
-        </c:when>
-        <c:when test="${jsp == '\"notice_write\"'}">
-            <%--                        <%@include file="/WEB-INF/jsp_v2/page/notice_article/mode/notice_writer.jsp" %>--%>
-            <jsp:include page="/WEB-INF/jsp_v2/page/notice_article/mode/notice_writer.jsp" flush="false"></jsp:include>
-        </c:when>
-        <c:otherwise>
-            <div>잘못된 jsp 변수가 넘어왔습니다. page.jsp 에서 jsp 변수가 제대로 받아지는지 확인 바랍니다.</div>
-            <%
-                System.out.println(jsp);
-            %>
-        </c:otherwise>
-    </c:choose>
+<div class="container">
+    <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6 p-5">
+        <c:choose>
+            <%--    notice  --%>
+            <c:when test="${jsp == '\"notice_list\"'}">
+                <%--                        <%@include file="/WEB-INF/jsp_v2/page/notice_article/mode/notice_list.jsp" %>--%>
+                <jsp:include page="/WEB-INF/jsp_v2/page/notice_article/mode/notice_list.jsp"
+                             flush="false"></jsp:include>
+            </c:when>
+            <c:when test="${jsp == '\"notice_view\"'}">
+                <%--                        <%@include file="/WEB-INF/jsp_v2/page/notice_article/mode/notice_view.jsp" %>--%>
+                <jsp:include page="/WEB-INF/jsp_v2/page/notice_article/mode/notice_view.jsp"
+                             flush="false"></jsp:include>
+            </c:when>
+            <c:when test="${jsp == '\"notice_modify\"'}">
+                <%--                        <%@include file="/WEB-INF/jsp_v2/page/notice_article/mode/notice_modifier.jsp" %>--%>
+                <jsp:include page="/WEB-INF/jsp_v2/page/notice_article/mode/notice_modifier.jsp"
+                             flush="false"></jsp:include>
+            </c:when>
+            <c:when test="${jsp == '\"notice_write\"'}">
+                <%--                        <%@include file="/WEB-INF/jsp_v2/page/notice_article/mode/notice_writer.jsp" %>--%>
+                <jsp:include page="/WEB-INF/jsp_v2/page/notice_article/mode/notice_writer.jsp"
+                             flush="false"></jsp:include>
+            </c:when>
+            <c:otherwise>
+                <div>잘못된 jsp 변수가 넘어왔습니다. page.jsp 에서 jsp 변수가 제대로 받아지는지 확인 바랍니다.</div>
+                <%
+                    System.out.println(jsp);
+                %>
+            </c:otherwise>
+        </c:choose>
+    </div>
 </div>
-
 
 <footer class="footer pt-5 mt-5">
     <div class="container">
@@ -437,11 +441,10 @@
     var type =<%=type%>;
     const loginButton = $('#loginButton');
     const userInfo = $('#userInfo');
-    if (user === null){
+    if (user === null) {
         var loginButtonText = '<a href="loginpage.do" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0 ms-1">LOGIN</a>';
         var userInfoText = '';
-    }
-    else{
+    } else {
         var loginButtonText = '<a href="logout.do" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0 ms-1">LOGOUT</a>';
         var userInfoText = '안녕하세요. ' + user.name + ' (' + type.for_header + ')님';
     }
@@ -450,7 +453,7 @@
 </script>
 </body>
 <style>
-    .fixed-table-toolbar {
+    .fixed-table-toolbar, .fixed-table-loading {
         display: none;
     }
 </style>
