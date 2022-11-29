@@ -96,7 +96,8 @@ public class NoticeBoardsDAO {
         Gson gson = new Gson();
         ArrayList<NoticeBoardsBean> selected = gson.fromJson(gson.toJson(listOfMaps), new TypeToken<List<NoticeBoardsBean>>() {}.getType());
         selected.get(0).title = getRemoveHtmlText(selected.get(0).title);
-        selected.get(0).content = getRemoveHtmlText(selected.get(0).content);
+        selected.get(0).content = toReplace(selected.get(0).content);
+        System.out.println(selected.get(0).content);
         return selected.get(0);
 
     }
@@ -570,6 +571,94 @@ public class NoticeBoardsDAO {
             DbUtils.closeQuietly(conn);
         }
         return results;
+    }
+
+    // 태그를 특수문자로 변경 (> → &gt)
+    public static String getReplace(String srcString) {
+
+        String rtnStr = null;
+
+        try{
+
+            StringBuffer strTxt = new StringBuffer("");
+
+            char chrBuff;
+
+            int len = srcString.length();
+
+
+            for(int i = 0; i < len; i++) {
+
+                chrBuff = (char)srcString.charAt(i);
+
+
+
+                switch(chrBuff) {
+
+                    case '<':
+
+                        strTxt.append("&lt;");
+
+                        break;
+
+                    case '>':
+
+                        strTxt.append("&gt;");
+
+                        break;
+
+                    case '&':
+
+                        strTxt.append("&amp;");
+
+                        break;
+
+                    default:
+
+                        strTxt.append(chrBuff);
+
+                }
+
+            }
+
+
+            rtnStr = strTxt.toString();
+
+        }catch(Exception e) {
+
+            e.printStackTrace();
+
+        }
+
+
+        return rtnStr;
+
+    }
+
+
+    //특수문자를 태그로 변경 (&gt → >)
+    public static String toReplace(String str) {
+
+        if(str == null) {
+            return null;
+        }
+
+        String returnStr = str;
+
+        returnStr = returnStr.replaceAll("<br>", "\n");
+
+        returnStr = returnStr.replaceAll("&gt;", ">");
+
+        returnStr = returnStr.replaceAll("&lt;", "<");
+
+        returnStr = returnStr.replaceAll("&quot;", "");
+
+        returnStr = returnStr.replaceAll("&nbsp;", " ");
+
+        returnStr = returnStr.replaceAll("&amp;", "&");
+
+        return returnStr;
+
     }
 
     private String getRemoveHtmlText(String content) {

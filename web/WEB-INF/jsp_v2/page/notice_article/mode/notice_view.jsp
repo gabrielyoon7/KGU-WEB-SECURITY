@@ -131,7 +131,7 @@ function formatDate(date) {
 }
 
 
-content.append(makemain(value));
+content.html((makemain(value)));
 title.append(value.title);
 postauthor.append('<strong>' + value.student_name + '</strong>');
 views.append(value.views);
